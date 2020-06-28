@@ -2,7 +2,12 @@
 Implementation of BFS tasks &amp; Edit Distance (Wagner Fischer) in Java
 
 * Problem 1 (BFS) 
-The BFS width search in a G graph selects a G top s as a starting point (in our program the top 1 is always selected as a starting point, since there will always be a node numbering starting from 1). The BFS algorithm belongs to the category of graph exploration algorithms and orders the graph in the form of a tree, exploring the peaks of G per level d = 0.1.2…, ie at increasing distance from s. (Level d: the peaks at a distance d from s). It is called against width because the current level d is plotted horizontally and examined top to top to give the next level d + 1. In our program we first read the file and create a list of neighbors, we use a queue to enter the neighboring peaks we are exploring, but also a HashMap <Integer, Boolean> type structure to note which peaks we have visited. The final BFS tree depends on the order of insertion of the adjacent peaks of a peak in the queue, but regardless of the series all BFS trees with the same starting point will have the same peaks at each level. The algorithm visits each peak at most once. In BFS we have the following types of acne: Acne Tree Acne that leads to a first-time visitor. Acne Horizontal Acne that connects two nodes at the same level Cross Acne
+The BFS width search in a G graph selects a G top s as a starting point (in our program the top 1 is always selected as a starting point, since there will always be a node numbering starting from 1). The BFS algorithm belongs to the category of graph exploration algorithms and orders the graph in the form of a tree, exploring the peaks of G per level d = 0.1.2…, ie at increasing distance from s. (Level d: the peaks at a distance d from s). It is called against width because the current level d is plotted horizontally and examined top to top to give the next level d + 1. In our program we first read the file and create a list of neighbors, we use a queue to enter the neighboring peaks we are exploring, but also a HashMap <Integer, Boolean> type structure to note which peaks we have visited. The final BFS tree depends on the order of insertion of the adjacent peaks of a peak in the queue, but regardless of the series all BFS trees with the same starting point will have the same peaks at each level. The algorithm visits each peak at most once. 
+
+In BFS we have the following types of acne: 
+Acne Tree: that leads to a first-time visitor Acne. 
+Acne Horizontal:  that connects two nodes at the same level Acne.
+Acne Cross: all the others Acnes.
 
 Complexity: O (m + n), where m is the set of edges and n is the set of vertices / nodes.
 
